@@ -1,6 +1,4 @@
 const username = document.querySelector(".Username");
-const username1 = document.getElementById("user").value;
-console.log(username1);
 
 const email = document.querySelector(".Email");
 const password = document.querySelector(".Password");
@@ -48,7 +46,18 @@ function validation() {
   //validation.preventDefault();
 }
 
+
 //---------localstorage---------
-localStorage.setItem("user", username1);
-let info = localStorage.getItem("user");
-console.log(info);
+document.querySelector(".btn").addEventListener("click", function () {
+  localStorage.setItem("user", username.value);
+});
+
+document.querySelector(".btn").addEventListener("click", function () {
+  localStorage.setItem("Email", email.value);
+});
+
+document.querySelector(".btn").addEventListener("click", function () {
+  localStorage.setItem("password", password.value);
+});
+
+
